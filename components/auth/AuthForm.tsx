@@ -339,8 +339,6 @@ export function AuthForm({ type }: AuthFormProps) {
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 magnetic pulse-glow" 
                   disabled={isLoading}
                   size="lg"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <AnimatePresence mode="wait">
                     {isLoading ? (
