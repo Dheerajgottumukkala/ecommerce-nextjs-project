@@ -54,7 +54,7 @@ export function ProductFilters({ onFiltersChange, initialFilters }: ProductFilte
   };
 
   const handleCategoryChange = (categoryId: string, checked: boolean) => {
-    setFilters(prev => ({
+    setFilters((prev: { categories: string[]; priceRange: number[]; inStock: boolean; featured: boolean }) => ({
       ...prev,
       categories: checked 
         ? [...prev.categories, categoryId]
@@ -63,14 +63,14 @@ export function ProductFilters({ onFiltersChange, initialFilters }: ProductFilte
   };
 
   const handlePriceRangeChange = (value: number[]) => {
-    setFilters(prev => ({
+    setFilters((prev: { categories: string[]; priceRange: number[]; inStock: boolean; featured: boolean }) => ({
       ...prev,
       priceRange: value
     }));
   };
 
   const handleBooleanFilterChange = (key: string, checked: boolean) => {
-    setFilters(prev => ({
+    setFilters((prev: { categories: string[]; priceRange: number[]; inStock: boolean; featured: boolean }) => ({
       ...prev,
       [key]: checked
     }));
