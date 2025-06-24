@@ -148,8 +148,6 @@ export function ProductCard({ product }: ProductCardProps) {
                         variant="secondary"
                         className="h-10 w-10 rounded-full glass magnetic pulse-glow"
                         onClick={handleWishlistToggle}
-                        whileHover={{ scale: 1.1, rotate: 10 }}
-                        whileTap={{ scale: 0.9 }}
                       >
                         <Heart 
                           className={`h-4 w-4 transition-colors ${inWishlist ? 'fill-red-500 text-red-500' : ''}`} 
@@ -167,8 +165,6 @@ export function ProductCard({ product }: ProductCardProps) {
                         variant="secondary"
                         className="h-10 w-10 rounded-full glass magnetic"
                         asChild
-                        whileHover={{ scale: 1.1, rotate: -10 }}
-                        whileTap={{ scale: 0.9 }}
                       >
                         <Link href={`/products/${product.slug}`}>
                           <Eye className="h-4 w-4" />
@@ -186,8 +182,6 @@ export function ProductCard({ product }: ProductCardProps) {
                         className="h-10 w-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 magnetic pulse-glow"
                         onClick={handleAddToCart}
                         disabled={product.stock_quantity === 0}
-                        whileHover={{ scale: 1.1, rotate: 10 }}
-                        whileTap={{ scale: 0.9 }}
                       >
                         <ShoppingCart className="h-4 w-4" />
                       </Button>
@@ -266,8 +260,6 @@ export function ProductCard({ product }: ProductCardProps) {
                         onClick={handleAddToCart}
                         disabled={product.stock_quantity === 0}
                         className="bg-gradient-to-r from-blue-500 to-purple-600 magnetic"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                       >
                         {product.stock_quantity === 0 ? 'Out of Stock' : 'Add to Cart'}
                       </Button>
